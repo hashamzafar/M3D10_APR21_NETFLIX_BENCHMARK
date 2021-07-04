@@ -1,210 +1,347 @@
-<!DOCTYPE html>
-<!-- Action
-Comedy
-Drama
-Horror
-Mystery
-Romance
-Thriller -->
 
+  
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
-    <link href="css/styles.css" rel="stylesheet" />
-    <title>Backoffice Netflix</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Netflix</title>
+    <style>
+        .submit-button:hover{
+            background-color: red;
+            border-color: transparent;
+            color: white;
+        }
+
+        .btn-danger:hover{
+            background-color: white;
+            border-color: transparent;
+        }
+
+        .home-btn:hover{
+          background-color: white;
+          color: black;
+          text-decoration: none;
+        }
+
+        .home-btn{
+          background-color: black;
+          border:1px solid grey;
+          color: grey;
+        }
+
+        .trash:hover{
+            color: red;
+        }
+
+        #detailButton{
+          background-color: black;
+          border:1px solid grey;
+          color: grey;
+          text-decoration: none;
+        }
+
+        #detailButton:hover{
+          background-color: white;
+          color: black;
+        }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">
-          <img src="./assets/netflix_logo.png" id="logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home</a>
-            </li>
-          </ul>
-        </div>
+
+    <!-- Navbar -->
+
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-Color ">
+        <a href="home.html"><img src="assets/netflix_logo.png" alt="logo" class="navbarLogo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link active" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TV Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Recently Added</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">MyList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./backoffice.html">Form</a>
+          </li>        
+        </ul>
+       <div class="d-flex align-items-center">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+          class="bi bi-search" viewBox="0 0 16 16">
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+        </svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+          height="16" fill="currentColor" class="bi bi-bell-fill bell  align-items-center px-30"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+        </svg></a>
+
+            <a href="#" >
+              <div class="nav-item dropdown justify-content-end ml-auto nav-link">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/avatar.png" alt="" class="avatar">
+                </a>
+    
+                <div  class="dropdown-menu userDropdown" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item p-0" href="#">
+                    <a href="profile.html" class="addUser" style="text-decoration:none;">Profile</a><img class="kidsIcon ml-5" src="assets/kids_icon.png" alt="kidsIcon">
+                  </a>
+                  <br>
+                  <a style="text-decoration:none;" class="addUser" href="account.html">Account</a>
+                </div>
+            </a>
+       </div>
       </div>
     </nav>
 
-    <div class="profile-page">
-      <div class="container">
-        <h1 class="text-light profile-title">Edit Movies</h1>
-        <hr />
+    <!-- Form -->
 
-        <div class="row">
-          <!-- <div class="col-md-3 col-xs-12">
-            <img src="./assets/avatar.png" width="200px" />
-          </div> -->
-          <div class="col-md-9 col-xs-12">
-            <label for="movie"><h3>Movie</h3></label>
-            <input
-              id="movieName"
-              placeholder="MOVIE NAME"
-              type="text"
-              class="netflix-input mb-2"
-              required
-            />
-
-            <div class="d-flex flex-column mb-4 mt-4">
-              <label for="category"><h3>Category</h3></label>
-              <input
-                id="categoryName"
-                placeholder="CATEGORY"
-                type="text"
-                class="netflix-input mb-2"
-                required
-              />
-              <!-- <h4 class="text-muted">Language</h4>
-              <button class="btn btn-outline-light mt-2 dropdown-toggle w-25">
-                English
-              </button> -->
-            </div>
-            <hr />
-            <div class="d-flex flex-column mt-2">
-              <!-- <h4 class="text-muted">Maturity Settings</h4>
-              <button class="btn btn-secondary mt-4 w-50 mb-4">
-                ALL MATURITY SETTINGS
-              </button> -->
-
-              <!-- <p class="text-light mt-2">
-                Show files for all maturity settings for this profile.
-              </p> -->
-
-              <!-- <button class="btn btn-outline-secondary mt-2 w-25">EDIT</button> -->
-            </div>
-
-            <hr />
-            <div class="mt-2">
-              <!-- <h4 class="text-muted">Autoplay Controls</h4> -->
-              <div class="row mt-5">
-                <div class="col-md-1">
-                  <!-- <input
-                    class="form-check-input btn-secondary"
-                    type="checkbox"
-                  /> -->
-                </div>
-                <div class="col-md-11">
-                  <!-- Autoplay next episode in a series on all devices -->
-                </div>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h2 class="d-inline-block mt-4 mb-3 text-center text-muted">Adding New Movie </h2>
+            <h5 id="todo" class="d-inline-block"></h5>
+  
+            <form onsubmit="submitForm(event)">
+              <div class="form-group text-muted ">
+                <label for="name">Movie Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  class="form-control"
+                  aria-describedby="name"
+                  placeholder="Name"
+                  required
+                />
+               
               </div>
-              <div class="row mt-2">
-                <div class="col-md-1">
-                  <!-- <input
-                    class="form-check-input btn-secondary"
-                    type="checkbox"
-                  /> -->
-                </div>
-                <div class="col-md-11">
-                  <!-- Autoplay next episode in a series on all devices -->
-                </div>
+              <div class="form-group text-muted">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  type="text"
+                  rows="6"
+                  class="form-control"
+                  aria-describedby="event description"
+                  placeholder="Description...."
+                  required
+                ></textarea>
               </div>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div onsubmit="handleSubmit(event)" class="row">
-          <div class="col-md-3">
-            <button id="btnSave" type="button" class="btn btn-light w-100">
-              SAVE
-            </button>
-          </div>
-          <div class="col-md-4">
-            <button
-              id="btnEdit"
-              type="button"
-              class="btn btn-outline-secondary w-50"
-            >
-              EDIT
-            </button>
-          </div>
-          <div class="col-md-4">
-            <button
-              id="btnDelete"
-              type="button"
-              class="btn btn-outline-secondary w-40"
-            >
-              DELETE
-            </button>
+              <div class="form-group text-muted">
+                <label for="category">Category</label>
+                <input
+                  id="category"
+                  type="text"
+                  class="form-control"
+                  aria-describedby="category"
+                  placeholder="Category eg: Horror"
+                  required
+                />
+             
+              </div>
+              <div class="form-group text-muted">
+                <label for="webadd">URL</label>
+                <input
+                  id="webadd"
+                  type="text"
+                  class="form-control"
+                  aria-describedby="webadd"
+                  placeholder="https://..."
+                  required
+                />
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="d-flex justify-content-between">
+            
+                    <button type="submit" class="btn btn-light submit-button mt-1">SUBMIT
+                        <div
+                    id="spinner"
+                    class="spinner-border spinner-border-sm d-none"
+                    role="status"
+                  >
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                    </button>
+
+                    <a onclick="detailPage()" id="detailButton" type="button" class="btn  detail-btn btn-light mt-1 d-none">GO BACK</a>
+
+                    <a href ="./home.html" type="button" class="btn  home-btn btn-light mt-1">HOME PAGE</a>
+
+                <button
+                id="delete-btn"
+                type="button"
+                class="badge-pill btn-danger d-none"
+                onclick="deleteData()">
+                <ion-icon class="trash" name="trash-outline"></ion-icon>
+              </button>
+              </div>                         
+            </form>
           </div>
         </div>
       </div>
-    </div>
-    <script>
-      const handleSubmit = async (event) => {
-        const url =
-          "https://strive-school-testing-apis.herokuapp.com/api/movies/"
-        event.preventDefault() //prevents the default behavior of Forms = refresh before saving
 
-        // console.log(event)
+      <span id="alert"></span>
 
-        let movieName = document.getElementById("movieName").value
+      <script>
 
-        const myEvent = {
-          movieName,
-          Category: document.getElementById("movieCategory").value,
+      const urlParam = new URLSearchParams(window.location.search)
+      let movieId = urlParam.get('id')
+      let categoryName = urlParam.get('category')
+      const url = "https://striveschool-api.herokuapp.com/api/movies/"
+      const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGFlMzVhM2NlYWY0ODAwMTVjOTE4NjMiLCJpYXQiOjE2MjUwNjAxODksImV4cCI6MTYyNjI2OTc4OX0.6bhF6ybAA7uiovBusbBNZP05BC9fQy0quRu0B1I4CQA"
+      //console.log(movieId);
+      //console.log(categoryName);
+
+      const movieFetch = async (moviecategory ="") =>{
+            try {
+                  const response = await fetch(url + moviecategory, {               
+                  'headers':{
+                     'Authorization': key,
+                     'Content-Type':'application/json'
+                    }
+                    })
+                  const movieData = await response.json()
+                  return movieData
+               }
+               catch(error){
+                   console.log(error);
+               }
+             }
+   
+      const emptyField = {
+        name: "",
+        description: "",
+        category: "",
+        imageUrl: ""
+      }
+       
+       const dataFields = function(par = emptyField){
+          document.getElementById('name').value = par.name
+          document.getElementById('description').value = par.description
+          document.getElementById('category').value = par.category
+          document.getElementById('webadd').value = par.imageUrl
         }
 
-        try {
-          const response = await fetch(url, {
-            method: "POST",
-            body: JSON.stringify(myEvent),
-            headers:{
-              "Content-Type": "application/json",
-            },
+      window.onload = async ()=>{
+        if(movieId){
+          const deleteButton = document.getElementById('delete-btn')
+          deleteButton.classList.remove('d-none')
+          const detailButton = document.getElementById('detailButton')
+          detailButton.classList.remove('d-none')
+          const h5 = document.getElementById('todo')
+          h5.innerText = " — EDIT"
+          h5.classList.add('text-danger', 'ml-2')          
+          const movies = await movieFetch(categoryName)
+          console.log(movies);
+          const requiredMovie = await movies.find(movie => movie._id.includes(movieId))
+          console.log(requiredMovie);
+          dataFields(requiredMovie)
+        }    
+       }
+
+       const MethodParameter = async function(methodpar, Id="",innerValue ){
+        try {            
+            const response = await fetch(url + movieId,{
+              method: methodpar,
+              body: JSON.stringify(innerValue),
+              headers:{
+                "Authorization": key,
+                "Content-Type": "application/json"
+              }
           })
+          const info = await response.json()
+          return info
+        } 
+          catch (error) {
+              console.log(error);              
+          }
+       }
+
+      const submitForm = async function(event){        
+          event.preventDefault()
+          spinnerLoad(true)
+          const movieValues = {
+              name : document.getElementById('name').value,
+              description: document.getElementById('description').value,
+              category: document.getElementById('category').value,
+              imageUrl: document.getElementById('webadd').value
+          }
+          console.log(await MethodParameter('PUT', movieId, movieValues));
+          if(movieId){
+            await MethodParameter('PUT', movieId, movieValues)
+            alertMsg('success', 'successfully updated')           
+          }
+          else{
+            await MethodParameter('POST', '', movieValues)
+            alertMsg('success', 'successfully added')       
+          }
+            spinnerLoad(false)          
+      }
+
+      const alertMsg = function(type, msg){
+          const alertSpan = document.getElementById('alert')
+          alertSpan.innerHTML = `<div class="alert alert-${type}" role="alert">${msg}</div>`
+          setTimeout(() => {
+          alertSpan.innerHTML = "";
+        }, 2000);
         }
-        if(response.ok) {
-          const data = await response.json()
-          alert("movie saved")
-        } else {
-          console.log("else")
+
+        const spinnerLoad = function(bool){
+          if(bool){
+            document.getElementById('spinner').classList.remove('d-none')
+          }
+          else{            
+            document.getElementById('spinner').classList.add('d-none')
+          }
         }
-        if(response.status === 400){
-          throw new Error("Bad request 400")
-        } else if (response.status === 401){
-          throw new Error('Anautorized 401')
-        } else if (response.status === 404){
-          throw new Error('Not found 404')
+
+        const deleteData = async function(){
+        
+        try {
+          const response = await fetch(url + movieId, {
+          'method': 'DELETE',
+          'headers': {
+          "Authorization": key
+              } 
+            })
+        if(response.ok){
+            window.location.assign('./home.html')
+                }
+        } catch (error) {
+          console.log(error)          
         }
-      
-    } catch (error) {
-      console.log(error);
-    }
-    </script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
+      }
+
+      const detailPage = function(){
+        window.location.assign(`./detail.html?id=${movieId}&category=${categoryName}`)       
+      }
+
+      </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
   </body>
 </html>
